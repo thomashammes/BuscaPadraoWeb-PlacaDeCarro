@@ -53,8 +53,9 @@ public class Main {
     public static void main(String[] args) {
         //instancia e usa objeto que captura código-fonte de páginas Web
         CapturaRecursosWeb crw = new CapturaRecursosWeb();
-        //crw.getListaRecursos().add("https://www.univali.br/");
         crw.getListaRecursos().add("https://www.carrosnors.com.br/inicio-de-placas-de-veiculos-por-estado/");
+        crw.getListaRecursos().add("https://www.noticiasautomotivas.com.br/placas-de-carros-por-estado/?expand_article=1");
+        crw.getListaRecursos().add("https://pt.wikipedia.org/wiki/Hist%C3%B3ria_das_placas_de_identifica%C3%A7%C3%A3o_de_ve%C3%ADculos_no_Brasil");
         ArrayList<String> listaCodigos = crw.carregarRecursos();
 
         String codigoHTML = listaCodigos.get(0);
@@ -120,7 +121,7 @@ public class Main {
         estados_finais[0] = "q8";
 
         //tabela de transição de AFD para reconhecimento números de dois dígitos
-        int[][] matriz = new int[10][38];
+        int[][] matriz = new int[9][38];
         for (int[] row : matriz) {
             Arrays.fill(row, -1);
         }
